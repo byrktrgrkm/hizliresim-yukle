@@ -1,0 +1,17 @@
+Options +FollowSymlinks 
+
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([0-9a-zA-Z-_/]+)$ index.php [QSA]
+
+
+RewriteRule ^image/?(.*)$ assets/share/$1 
+
+
+
+
+
+
